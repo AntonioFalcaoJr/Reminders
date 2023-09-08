@@ -1,0 +1,27 @@
+﻿version: "3.9"
+
+services:
+  
+  webapi:
+    image: webapi:latest
+    build:
+      context: .
+      dockerfile: ./src/Web/WebAPI/Dockerfile
+    environment:
+      ASPNETCORE_HTTP_PORTS: 80
+      ASPNETCORE_ENVIRONMENT: Staging
+    depends_on:
+      mssql:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - internal
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 200M
+      restart_policy:
+        condition: any

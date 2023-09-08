@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <ItemGroup>
+        <PackageReference Include="CorrelationId" />
+        <PackageReference Include="FluentValidation" />
+        <PackageReference Include="FluentValidation.AspNetCore" />
+        <PackageReference Include="MassTransit.RabbitMQ" />
+        <PackageReference Include="Serilog.AspNetCore" />
+        <PackageReference Include="Swashbuckle.AspNetCore" />
+        <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Application\Application.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure.EventBus\Infrastructure.EventBus.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure.EventStore\Infrastructure.EventStore.csproj" />
+    </ItemGroup>
+</Project>

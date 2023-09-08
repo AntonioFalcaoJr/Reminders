@@ -1,0 +1,74 @@
+﻿<Project>
+  <PropertyGroup Label="Common properties">
+    <Product>Reminder</Product>
+    <Copyright>Copyright (c) 2023 Antonio Falcão Jr.</Copyright>
+    <Authors>Antônio Falcão Jr.</Authors>
+    <TargetFramework>net7.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+    <EnablePreviewFeatures>true</EnablePreviewFeatures>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <!--<TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup Label="Packages">
+    <!--Ardalis.SmartEnum-->
+    <PackageVersion Include="Ardalis.SmartEnum" Version="7.0.0" />
+    <PackageVersion Include="Ardalis.SmartEnum.AutoFixture" Version="7.0.0" />
+    <PackageVersion Include="Ardalis.SmartEnum.SystemTextJson" Version="7.0.0" />
+    <!--CorrelationId-->
+    <PackageVersion Include="CorrelationId" Version="3.0.1" />
+    <!--FluentValidation-->
+    <PackageVersion Include="FluentValidation" Version="11.7.1" />
+    <PackageVersion Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+    <!--JsonNet-->
+    <PackageVersion Include="JsonNet.ContractResolvers" Version="2.0.0" />
+    <!--MassTransit-->
+    <PackageVersion Include="MassTransit" Version="8.1.1-develop.1528" />
+    <PackageVersion Include="MassTransit.Abstractions" Version="8.1.0" />
+    <PackageVersion Include="MassTransit.Newtonsoft" Version="8.1.0" />
+    <PackageVersion Include="MassTransit.Quartz" Version="8.1.0" />
+    <PackageVersion Include="MassTransit.RabbitMQ" Version="8.1.0" />
+    <!--MicroElements.Swashbuckle-->
+    <PackageVersion Include="MicroElements.Swashbuckle.FluentValidation" Version="5.7.0" />
+    <!--Microsoft.AspNetCore-->
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.0-alpha.1.23454.10" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.0-alpha.1.23454.10" />
+    <PackageVersion Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageVersion Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Http.Connections.Common" Version="9.0.0-alpha.1.23456.21" />
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="9.0.0-alpha.1.23454.10" />
+    <!--Microsoft.EntityFrameworkCore-->
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.10" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.10" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    <!--Microsoft.Extensions-->
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Features" Version="7.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Polly" Version="9.0.0-alpha.1.23454.10" />
+    <PackageVersion Include="Microsoft.Extensions.Options.DataAnnotations" Version="7.0.0" />
+    <!--Newtonsoft-->
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
+    <!--OpenTelemetry-->
+    <PackageVersion Include="OpenTelemetry.Exporter.Jaeger" Version="1.5.1" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.6.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.5.1-beta.1" />
+    <!--Quartz-->
+    <PackageVersion Include="Quartz.Extensions.Hosting" Version="3.7.0" />
+    <PackageVersion Include="Quartz.Serialization.Json" Version="3.7.0" />
+    <!--Serilog-->
+    <PackageVersion Include="Serilog" Version="3.0.1" />
+    <PackageVersion Include="Serilog.AspNetCore" Version="7.0.0" />
+    <PackageVersion Include="Serilog.Extensions.Hosting" Version="7.0.0" />
+    <PackageVersion Include="Serilog.Settings.Configuration" Version="7.0.0" />
+    <PackageVersion Include="Serilog.Sinks.Elasticsearch" Version="9.0.3" />
+    <!--Swashbuckle-->
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.5.0" />
+  </ItemGroup>
+</Project>
