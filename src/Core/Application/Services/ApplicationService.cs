@@ -30,16 +30,18 @@ public class ApplicationService(IEventStoreGateway eventStoreGateway, IEventBusG
     public Task AppendEventsAsync<TAggregate, TId>(TAggregate aggregate, CancellationToken cancellationToken)
         where TAggregate : IAggregateRoot<TId>
         where TId : IIdentifier, new()
-        => unitOfWork.ExecuteAsync(async ct =>
-        {
-            while (aggregate.TryDequeueEvent(out var @event))
+        => unitOfWork.ExecuteAsync(
+            operationAsync: async ct =>
             {
-                if (@event is null) continue;
-                var storeEvent = StoreEvent<TAggregate, TId>.Create(aggregate, @event);
-                await eventStoreGateway.AppendAsync(storeEvent, ct);
-                await eventBusGateway.PublishAsync(@event, ct);
-            }
-        }, cancellationToken);
+                while (aggregate.TryDequeueEvent(out var @event))
+                {
+                    if (@event is null) continue;
+                    var storeEvent = StoreEvent<TAggregate, TId>.Create(aggregate, @event);
+                    await eventStoreGateway.AppendAsync(storeEvent, ct);
+                    await eventBusGateway.PublishAsync(@event, ct);
+                }
+            },
+            cancellationToken: cancellationToken);
 
     public Task SchedulePublishAsync(IDelayedEvent @event, DateTimeOffset scheduledTime, CancellationToken cancellationToken)
         => eventBusGateway.SchedulePublishAsync(@event, scheduledTime, cancellationToken);
